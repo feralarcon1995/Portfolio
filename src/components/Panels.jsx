@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { useAnimations } from './../hooks/useAnimations';
 
 const PanelStyles = styled(motion.div)`
@@ -41,52 +41,68 @@ pointer-events: none;
     }
 `
 
-const generateMessage = ()=>{
+const generateMessage = () => {
     const messages = ["Hold On...",
-    "Just A Sec...",
-    "Any Minute Now...",
-    "Loading...",
-    "It's Coming...",
-    "One Moment...",
-    "Almost There...",
-    "Hang On...",
-    "Easy Does It..."]
-    const randomNum = Math.floor(Math.random()*messages.length)
+        "Just A Sec...",
+        "Any Minute Now...",
+        "Loading...",
+        "It's Coming...",
+        "One Moment...",
+        "Almost There...",
+        "Hang On...",
+        "Easy Does It..."]
+    const randomNum = Math.floor(Math.random() * messages.length)
     return messages[randomNum]
 }
 
-const Panels = ()=>{
-    const {transition} = useAnimations();
+const Panels = () => {
+    const { transition } = useAnimations();
 
     return (
         <PanelStyles
         >
-            <motion.div 
-            initial={{height: 0}}
-            animate={{height: [window.innerHeight, window.innerHeight, 0, 0], 
-                top: [0, 0, window.innerHeight, window.innerHeight], transition: {...transition, duration: 3.5, times: [0, 0.6, 0.99, 1]}}}
-            exit={{height: [0,0, window.innerHeight, window.innerHeight], top: [0,0,0,0], transition: {...transition, duration: 2, times: [0, 0,1, 0.9, 1]}}}
-            className="left"></motion.div>
-            <motion.div 
-            initial={{height: 0}}
-            animate={{height: [window.innerHeight, window.innerHeight, 0, 0], top: [0,0,0,0], transition: {...transition, duration: 3.5, times: [0, 0.6, 0.99, 1]}}}
-            exit={{height: [0,0, window.innerHeight, window.innerHeight], 
-                top: [window.innerHeight, window.innerHeight, 0, 0], transition: {...transition, duration: 2, times: [0, 0,1, 0.9, 1]}}}
-            className="right"></motion.div>
-            <motion.h2 
-            initial={{opacity: 0, display: "block", top: "60%", left: "50%", x:"-50%", y:"-50%"}}
-            animate={{
-                top: ["70%", "50%", "50%", "30%", "40%"],
-                left: "50%",
-                x: "-50%",
-                y:"-50%", 
-                opacity: [0, 1, 1, 0, 0],
-                transition: {...transition, duration: 2.4, times: [0, 0.5, 0.5, 0.99, 1]}
-        }}
-            exit={{display: "none", opacity: 0, transition:{duration: 0.01}}}
-            className="message">{
-                window.innerWidth < 500? "Best Viewed on Desktop" : generateMessage()
-            }</motion.h2>
+            <motion.div
+                initial={{ height: 0 }}
+                animate={{
+                    height:
+                        [window.innerHeight,
+                        window.innerHeight, 0, 0],
+                    top: [0, 0, window.innerHeight, window.innerHeight],
+                    transition: { ...transition, duration: 3.5, times: [0, 0.6, 0.99, 1] }
+                }}
+                exit={{
+                    height: [0, 0, window.innerHeight, window.innerHeight],
+                    top: [0, 0, 0, 0],
+                    transition: { ...transition, duration: 2, times: [0, 0, 1, 0.9, 1] }
+                }}
+                className="left"></motion.div>
+            <motion.div
+                initial={{ height: 0 }}
+                animate={{
+                    height: [window.innerHeight, window.innerHeight, 0, 0],
+                    top: [0, 0, 0, 0],
+                    transition: { ...transition, duration: 3.5, times: [0, 0.6, 0.99, 1] }
+                }}
+                exit={{
+                    height: [0, 0, window.innerHeight, window.innerHeight],
+                    top: [window.innerHeight, window.innerHeight, 0, 0],
+                    transition: { ...transition, duration: 2, times: [0, 0, 1, 0.9, 1] }
+                }}
+                className="right"></motion.div>
+            <motion.h2
+                initial={{ opacity: 0, display: "block", top: "60%", left: "50%", x: "-50%", y: "-50%" }}
+                animate={{
+                    top: ["70%", "50%", "50%", "30%", "40%"],
+                    left: "50%",
+                    x: "-50%",
+                    y: "-50%",
+                    opacity: [0, 1, 1, 0, 0],
+                    transition: { ...transition, duration: 2.4, times: [0, 0.5, 0.5, 0.99, 1] }
+                }}
+                exit={{ display: "none", opacity: 0, transition: { duration: 0.01 } }}
+                className="message">{
+                    window.innerWidth < 500 ? "Best Viewed on Desktop" : generateMessage()
+                }</motion.h2>
         </PanelStyles>
     )
 }

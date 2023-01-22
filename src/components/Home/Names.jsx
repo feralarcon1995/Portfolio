@@ -13,8 +13,8 @@ const NamesStyles = styled(motion.div)`
             font-weight: 600;
             display: inline-block;
             font-size:calc(var(--VW)*9);
-            line-height: calc(var(--VW)*11);
-            height: calc(var(--VW)*3);
+            line-height: calc(var(--VW)*9);
+            height: calc(var(--VW)*12);
             text-transform: uppercase;
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: calc(var(--VW)*0.3) var(--black);

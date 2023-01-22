@@ -4,56 +4,41 @@ import { motion } from 'framer-motion';
 import { useAnimations } from '../../hooks/useAnimations';
 
 const BigTextStyles = styled.div`
-height: 100vh;
-   position:relative;
-   display: flex;
-   align-items: center;
-   flex-wrap:wrap
-
-   .containers{
-   height: 80vh;
-   }
-   .container{
-    text-transform:uppercase;
-    width:100%;
-    overflow:hidden;
-    
-    :nth-child(1){
-        margin-left:8vw;
-    }
+height:100vh;
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+margin-bottom: 10vh;
+.container{
+    overflow: hidden;
+    width: 100%;
     :nth-child(2){
-        margin-left:12vw;
+        text-align: right;
     }
     :nth-child(3){
-        margin-left:18vw;
+            padding-left: 15vw;
     }
-    :nth-child(4){
-        margin-left:8vw;
-    }
-
     h2{
-        
-        font-size: 10vw;
-        line-height: 9vw;
-        height: 8vw;
-
+        text-transform: uppercase;
+        font-size: calc(var(--VW)*11);
+        line-height: 10vw;
+        height: 10vw;
+        overflow: hidden;
     }
-   }
-`;
+}
+`
 
 const BigText = () => {
     const { transition, textReveal } = useAnimations()
 
     return (
-        <BigTextStyles>
-
-            <div className="containers">
+        <BigTextStyles data-scroll-section className="big-text">
                 <div className='container'>
                     <motion.h2
                         variants={textReveal}
                         initial='initial'
                         animate='animate'
-                        transition={{ ...transition, delay: 1 }}
+                        transition={{ ...transition, delay: 3 }}
                     >Frontend</motion.h2>
                 </div>
                 <div className='container'>
@@ -61,7 +46,7 @@ const BigText = () => {
                         variants={textReveal}
                         initial='initial'
                         animate='animate'
-                        transition={{ ...transition, delay: 1.2 }}
+                        transition={{ ...transition, delay: 3.2 }}
                     > Developer</motion.h2>
                 </div>
                 <div className='container'>
@@ -69,7 +54,7 @@ const BigText = () => {
                         variants={textReveal}
                         initial='initial'
                         animate='animate'
-                        transition={{ ...transition, delay: 1.4 }}
+                        transition={{ ...transition, delay: 3.4 }}
                     >Based in </motion.h2>
                 </div>
                 <div className='container'>
@@ -77,11 +62,9 @@ const BigText = () => {
                         variants={textReveal}
                         initial='initial'
                         animate='animate'
-                        transition={{ ...transition, delay: 1.6 }}
+                        transition={{ ...transition, delay: 3.6 }}
                     >Argentina.</motion.h2>
                 </div>
-            </div>
-
 
         </BigTextStyles>
 

@@ -1,22 +1,122 @@
-import React from 'react'
+import { useScroll } from "../hooks/useScroll";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+
+import Navbar from "../components/Navbar";
+import Panels from "../components/Panels";
+import BigText from "../components/About/BigText";
+import MainSection from "../components/About/MainSection";
+import Info from "../components/About/Info";
+import Marque from "../components/About/Marque";
+
+const AboutStyles = styled(motion.div)`
+    padding: 0 4vw;
+    padding-bottom: 6vw;
+    .hello{
+        h2{
+            font-size: calc(var(--VW)*);
+            text-align: center;
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                font-size: calc(var(--VW)*6);
+            }
+        }
+    }
+    .name{
+        margin: 10vh 0 20vh 0;
+        h2{
+            font-size: calc(var(--VW)*13);
+            line-height: 9vw;
+            height: 9vw;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0.1vw var(--black);
+            text-transform: uppercase;
+            :nth-child(3){
+                text-align: right;
+            }
+        }
+        h3{
+            font-size: calc(var(--VW)*3);
+            text-align: center;
+            z-index: 5;
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                font-size: calc(var(--VW)*6);
+            }
+        }
+    }
+    .split{
+        margin: 5vh 0;
+        h2{
+            text-transform: uppercase;
+            font-size: calc(var(--VW)*3);
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                font-size: calc(var(--VW)*5);
+            }
+        }
+    }
+    .contact{
+        text-align: right;
+        h2{
+            font-size: calc(var(--VW)*6);
+            text-transform: uppercase;
+        }
+        a{
+            font-size: calc(var(--VW)*10);
+            text-transform: uppercase;
+            -webkit-text-fill-color: var(----bluelight);
+            -webkit-text-stroke: 0.14vw var(--black);
+            mix-blend-mode: difference;
+
+            &:hover{
+                -webkit-text-fill-color: var(--bluelight);
+                -webkit-text-stroke: 0.14vw var(--black);
+            }
+        }
+    }
+`
 
 const About = () => {
-  return (
-    <div>
-        
-        <h1>about</h1>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque sint repellat nam sequi excepturi! Rem tempora facilis quas a neque quos, et autem incidunt excepturi magni unde rerum eum quis.
-        Possimus, asperiores. Odit, suscipit! Omnis saepe quae nam voluptatum est illo obcaecati quaerat quam architecto! Laborum suscipit, excepturi, quod, reprehenderit minus vero ut aliquam ex expedita odit veniam molestias reiciendis!
-        Reprehenderit libero assumenda architecto corporis illo molestias deleniti obcaecati minus. Tempora ipsam dolor molestiae qui culpa minima, harum natus ut. Optio repellat commodi quo. Pariatur molestias repellat dolores ipsam beatae!
-        Quibusdam aperiam dolorum fugiat sit atque soluta error quo ut eum commodi nihil accusamus maiores non magni odio tempore debitis, nemo asperiores sint provident eaque! Adipisci a cum possimus quos.
-        Molestiae excepturi saepe adipisci, exercitationem quos ad officia voluptates ab architecto animi quaerat necessitatibus impedit veritatis at neque atque possimus odit, assumenda ducimus cumque nam deleniti debitis quasi. Doloribus, eligendi!
-        Excepturi officiis deserunt illum a placeat? Laboriosam ut provident enim libero unde pariatur, aliquam numquam eius. Perspiciatis, incidunt. Est fugiat dolores commodi odio aliquid non eligendi facere veritatis in quis.
-        Minima quidem, eius, atque ad, dolor quae omnis recusandae id at eos voluptatem ea quibusdam laboriosam doloremque modi. Impedit provident culpa consectetur. Ut optio quibusdam exercitationem autem quae necessitatibus tempora!
-        Expedita recusandae placeat unde, voluptatibus odit voluptatem cumque illo pariatur dolores doloribus iure qui modi quis distinctio consectetur? Architecto optio reprehenderit iure corporis ex. Odio similique nulla ullam voluptates aliquam.
-        Impedit numquam id repellat praesentium in, odit explicabo excepturi, nemo dolore aperiam porro minus expedita atque quia? Nostrum sit accusamus tenetur. Voluptatum voluptatem ab cupiditate voluptate, adipisci exercitationem delectus commodi?
-        Magni fugit quia facilis odit delectus? Quod praesentium ut commodi ducimus libero ad voluptatem mollitia, aliquam voluptates facere necessitatibus officiis totam quia, dolorum nostrum quas iusto facilis. Qui, voluptates corporis?
-    </div>
-  )
+    const {scrollRef} = useScroll();
+
+    return (
+        <>
+            <Navbar />
+            <Panels />
+            <LocomotiveScrollProvider>
+                <AboutStyles
+                    initial={{ backgroundColor: "rgba(15, 14, 14, 1)", pointerEvents: "none" }}
+                    animate={{ backgroundColor: "rgba(15, 14, 14, 0)", pointerEvents: "unset" }}
+                    exit={{ opacity: [1, 1, 0], transition: { duration: 2, times: [0, 0.99, 1] } }}
+                    ref={scrollRef} data-scroll-container >
+                    <BigText />
+                    <div data-scroll-section className="hello">
+                        <h2 data-scroll data-scroll-speed="-8" data-scroll-direction="horizontal">Hi, my name is</h2>
+                    </div>
+                    <div data-scroll-section className="name">
+                        <h2 data-scroll data-scroll-speed="0.5">
+                            Fernando
+                        </h2>
+                        <h3 data-scroll data-scroll-speed="6">Web Developer</h3>
+                        <h2 data-scroll data-scroll-speed="0.5">Alarcon</h2>
+                    </div>
+                    <MainSection />
+                    <Marque />
+                    <div data-scroll-section className="split">
+                        <h2>FrontEnd Addicted.</h2>
+                        <h2>Cybersecurity Enthusiast.</h2>
+                    </div>
+                    <Info />
+                    <div data-scroll-section className="contact">
+                        <h2>Got Some Ideas?</h2>
+                        <a href="mailto: feralarcon1995@gmail.com">Let's Talk.</a>
+                    </div>
+                </AboutStyles>
+            </LocomotiveScrollProvider>
+
+
+
+        </>
+    )
 }
 
 export default About

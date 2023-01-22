@@ -21,3 +21,11 @@
     font-style: normal;
     font-display: auto;
 }
+
+::selection{
+    background-color: rgb(239, 146, 255);
+}
+
+.c{
+    color: rgba(15, 14, 14,1);
+}

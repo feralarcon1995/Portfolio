@@ -6,22 +6,16 @@ export const useMousePosition = () => {
 
     useEffect(() => {
         const handlePosition = (e) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-
-            if(e.target.tagname==='a'){
+            setMousePosition({ x: e.clientX, y: e.clientY })
+            if (e.target.tagName === "A") {
                 setHoverNav(true);
-            }else{
+            } else {
                 setHoverNav(false);
             }
-        };
+        }
 
-        window.addEventListener('mousemove', handlePosition);
-
-        return () => window.removeEventListener('mousemove', handlePosition);
-
-
-    }, []);
-
-    return {...mousePosition,hoverNav };
+        window.addEventListener("mousemove", handlePosition)
+        return () => window.removeEventListener("mousemove", handlePosition)
+    }, [])
+    return { ...mousePosition, hoverNav }
 }
-
