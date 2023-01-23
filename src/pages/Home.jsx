@@ -11,7 +11,6 @@ import DisplacementImg from "../assets/images/homepage/glass.webp";
 //components
 import Panels from '../components/Panels'
 import Names from "../components/Home/Names"
-import BigText from '../components/About/BigText'
 import { useAnimations } from './../hooks/useAnimations';
 
 //icons

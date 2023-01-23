@@ -9,7 +9,7 @@ const NavStyles = styled.div`
 }
 .logo{
     top: 2vw;
-    left: 2vw;
+    left: 1.2vw;
     width: 3.2vw;
     height: 3.2vw;
     mix-blend-mode: normal;
@@ -55,13 +55,13 @@ const Navbar = () => {
         <NavStyles>
 
             <NavLink className="logo nav-nutton" to="/">
-                Fernando Alarcon
+                FA
             </NavLink>
             <NavLink className="works nav-button" to="/works">
                 Works
             </NavLink>
 
-            <NavLink className=" about nav-button" to="about" >
+            <NavLink className=" about nav-button" to="/about" >
                 About
             </NavLink>
         </NavStyles>

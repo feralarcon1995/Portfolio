@@ -23,7 +23,7 @@ export const useAnimations = () => {
             transition: {
                 duration: 1,
                 staggerChildren: 0.2,
-                delayChildren: 3,
+                delayChildren: 2,
             }
         }
     }
@@ -36,7 +36,7 @@ export const useAnimations = () => {
             opacity:1,
             transition: {
                 staggerChildren: 0.08,
-                delayChildren: 3.8,
+                delayChildren: 2.4,
             }
         }
     }
