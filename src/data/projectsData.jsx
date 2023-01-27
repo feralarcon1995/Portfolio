@@ -15,7 +15,7 @@ import pinder from "../assets/images/projects/pinder/pinder.png";
 
 //VIAJAYA
 import v1 from "../assets/images/projects/viajaya/v1.png";
-import v2 from "../assets/images/projects/viajaya/v2.png";
+import v2 from "../assets/images/projects/viajaya/V2.png";
 
 
 export const proyectData = [
