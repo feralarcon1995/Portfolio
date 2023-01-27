@@ -3,7 +3,7 @@
 
 import React from "react";
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const ProjectFooterStyles = styled.div`
     display: flex;
@@ -34,7 +34,7 @@ const ProjectFooter = ({next})=>{
 
     return(
         <ProjectFooterStyles data-scroll-section>
-            <Link to={`../works/${next}`} className="next">next <span>&rsaquo;</span></Link>
+            <a to={next} className="next" rel="noreferrer">next <span>&rsaquo;</span></a>
         </ProjectFooterStyles>
     )
 }
