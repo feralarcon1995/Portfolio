@@ -1,6 +1,8 @@
 import lpTS1 from "../assets/images/projects/lp/lp.png";
 import hand1 from "../assets/images/projects/handcode/h.png";
-import tienda1 from "../assets/images/projects/tiendablu/t1.png"
+import tienda1 from "../assets/images/projects/tiendablu/t1.png";
+import pinder from "../assets/images/projects/pinder/pinder.png";
+import viajaya from "../assets/images/projects/viajaya/v1.png";
 
 export const WorksListItem = {
     id: 'string',
@@ -10,7 +12,7 @@ export const WorksListItem = {
     rightFlex: [0, 1, 2, 3],
     thumbnailOffset: 'string',
     offsetX: 'number',
-    offsetY:' number',
+    offsetY: ' number',
 }
 
 
@@ -43,6 +45,27 @@ export const WorksList = [
         rightFlex: 3,
         thumbnailOffset: "70%",
         offsetX: -10,
+        offsetY: 5,
+    },
+    {
+        id: "pinder",
+        title: "Pinder",
+        src: pinder,
+        leftFlex: 3,
+        rightFlex: 1,
+        thumbnailOffset: "20%",
+        offsetX: 30,
+        offsetY: 5,
+    },
+
+    {
+        id: "viajaya",
+        title: "VIAJAYA",
+        src: viajaya,
+        leftFlex: 0,
+        rightFlex: 2,
+        thumbnailOffset: "60%",
+        offsetX: 30,
         offsetY: 5,
     },
 

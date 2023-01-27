@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useMousePosition } from './../../hooks/useMousePosition';
-import { WorksList } from "../../data/workList";
 import { WorksListItem } from "../../data/workList";
 import { useAnimations } from "../../hooks/useAnimations";
 

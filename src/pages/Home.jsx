@@ -164,7 +164,7 @@ const Home = () => {
           <motion.img
               variants={opacityReveal} initial="initial"
               animate="animate"
-              transition={{ ...transition, duration: 1, delay: 2.7 }}
+              transition={{ ...transition, duration: 1, delay: 2.5 }}
               src={Logo} alt="Logo"/>
 
           </div>
