@@ -42,15 +42,14 @@ pointer-events: none;
 `
 
 const generateMessage = () => {
-    const messages = ["Hold On...",
-        "Just A Sec...",
-        "Any Minute Now...",
+    const messages = ["Welcome...",
+        "Just A Second...",
+        "In progress...",
         "Loading...",
         "It's Coming...",
         "One Moment...",
         "Almost There...",
-        "Hang On...",
-        "Easy Does It..."]
+        "Don't leave.."]
     const randomNum = Math.floor(Math.random() * messages.length)
     return messages[randomNum]
 }

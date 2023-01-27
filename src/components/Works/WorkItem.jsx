@@ -173,7 +173,7 @@ const WorkItem = (props) => {
                             transition={{ ...transition, duration: 1 }}
                             className="mask"></motion.div>
                         <motion.div
-                            initial={{ backgroundColor: "#0f0e0e" }}
+                            initial={{ backgroundColor: "rgb(15, 14, 14)" }}
                             animate={{ backgroundColor: "unset" }}
                             className="cover"></motion.div>
                     </div>
@@ -183,7 +183,7 @@ const WorkItem = (props) => {
                                 variants={textReveal}
                                 transition={transition}
                                 className="text">
-                                {title}
+                                {title} 
                             </motion.div>
                         </h2>
                     </motion.div>
@@ -196,7 +196,7 @@ const WorkItem = (props) => {
                             transition={{ ...transition, duration: 1 }}
                             className="mask"></motion.div>
                         <motion.div
-                            initial={{ backgroundColor: "#0f0e0e" }}
+                            initial={{ backgroundColor: "rgb(15, 14, 14)" }}
                             animate={{ backgroundColor: "unset" }}
                             className="cover"></motion.div>
                     </motion.div>
@@ -226,7 +226,7 @@ const WorkItem = (props) => {
                             transition={{ ...transition, duration: 1 }}
                             className="mask right"></motion.div>
                         <motion.div
-                            initial={{ backgroundColor: "#0f0e0e" }}
+                            initial={{ backgroundColor: "rgb(15, 14, 14)" }}
                             animate={{ backgroundColor: "unset" }}
                             className="cover"></motion.div>
                     </motion.div>

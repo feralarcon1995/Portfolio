@@ -8,6 +8,7 @@ import Work from './pages/Work';
 import NotFound from './pages/NotFound';
 import { AnimatePresence } from 'framer-motion';
 import CustomCursor from './components/CustomCursor';
+import Project from './pages/Project';
 
 function App() {
   const location = useLocation();
@@ -39,6 +40,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/works" element={<Work />} />
+          <Route exact path="/works/:projectID" element={<Project/>}/>
           <Route exact path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

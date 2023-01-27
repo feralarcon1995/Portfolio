@@ -36,7 +36,7 @@ const PointerStyles = styled.div`
         background-color: transparent;
     }
     &.non-border{
-        border:none
+        border: 0px solid transparent;;
     }
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         display: none;
@@ -57,8 +57,8 @@ const CustomCursor = () => {
                     y: "-50%",
                     scale: hoverNav ? 1.8 : 1,
                     opacity: hoverNav ? 1 : 0.15,
-                    border: hoverNav ? "on-hover" : "non-border",
-                    backgroundColor: hoverNav ? "var(--bluelight)" : "#0f0e0e",
+                    border: hoverNav ? "on-hover" : " none",
+                    backgroundColor: hoverNav ? "var(--bluelight)" : "rgb(15, 14, 14)",
                 }}
                 transition={{ ease: "linear", duration: 0.15 }}
             />

@@ -1,12 +1,9 @@
-import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import hoverEffect from "hover-effect";
-import Fer from "../assets/images/homepage/profile.jfif";
-import Fer2 from "../assets/images/homepage/profile2.png";
-import DisplacementImg from "../assets/images/homepage/glass.webp";
+import Logo from '../assets/images/logo.png';
+
 
 //components
 import Panels from '../components/Panels'
@@ -41,7 +38,7 @@ padding: 2vw;
     width: 24%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:space-evenly;
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         display: none;
     }
@@ -50,27 +47,23 @@ padding: 2vw;
             height: 50vh;
             overflow: hidden;
         }
-        .descriptions{
-            margin-top: 3vh;
-            text-align: justify;
-
-            
-        }
+    
     }
-
 
     &-bottom{
         overflow: hidden;
+        display: flex;
+        align-items:center;
+        justify-content:space-evenly;
         a{
-            margin-right: 3vw;
             display: inline-block;
+            font-size: 8vh;
             svg{
                 pointer-events: none;
-                width: 2.5vw;
-                height: 2.5vw;
                 mix-blend-mode: normal;
                 color: var(--black);
                 background-color: var(--bluelight);
+                border-radius:50%;
                 &:hover{
                     color: var(--bluelight);
                     background-color:var(--black);
@@ -155,18 +148,8 @@ padding: 2vw;
 
 const Home = () => {
 
-  const profile = useRef(null);
   const { transition, opacityReveal, angleTextReveal } = useAnimations();
 
-  useEffect(() => {
-    new hoverEffect({
-      parent: profile.current,
-      intensity: 1.4,
-      image1: Fer2,
-      image2: Fer,
-      displacementImage: DisplacementImg
-    })
-  });
 
   return (
     <>
@@ -178,16 +161,15 @@ const Home = () => {
       >
         <div className="left">
           <div className="left-top">
-            <div className="pic" ref={profile}></div>
-            <div className="descriptions">
-              <motion.p
-                variants={opacityReveal} initial="initial"
-                animate="animate"
-                transition={{ ...transition, duration: 1, delay: 2.5 }}
-              >Hi, <span className="span-bg">I'm Fernando Alarcon based in Argentina.</span>  I'm always looking for new challenges in a development team, where I can add value from <span className="span-bg">my experience and knowledge</span> in the <span className="span-bg">Front-End area</span> , and keep learning every day. At the same time,  <span className="span-bg"> I am a beginner in cybersecurity </span> and <span className="span-bg">I study English </span> to improve my skills in the working field.</motion.p>
-            </div>
+          <motion.img
+              variants={opacityReveal} initial="initial"
+              animate="animate"
+              transition={{ ...transition, duration: 1, delay: 2.7 }}
+              src={Logo} alt="Logo"/>
+
           </div>
           <div className="left-bottom">
+          
             <motion.a
               variants={opacityReveal} initial="initial"
               animate="animate"
@@ -206,13 +188,7 @@ const Home = () => {
         </div>
         <div className="right">
           <Names />
-          <div className="right-descriptions">
-            <motion.p
-              variants={opacityReveal} initial="initial"
-              animate="animate"
-              transition={{ ...transition, duration: 1, delay: 4.5 }}
-            >Hi, <span className="span-bg">I'm Fernando Alarcón based in Argentina.</span>  I'm always looking for new challenges in a development team, where I can add value from <span className="span-bg">my experience and knowledge</span> in the <span className="span-bg">Front-End area</span> , and keep learning every day. At the same time,  <span className="span-bg"> I am a beginner in cybersecurity </span> and <span className="span-bg">I study English </span> to improve my skills in the working field.</motion.p>
-          </div>
+        
           <div className="right-bottom">
             <motion.div className="link-container">
               <motion.div className="link-wrapper"

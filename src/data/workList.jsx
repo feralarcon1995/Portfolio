@@ -1,6 +1,6 @@
-import lpTS1 from "../assets/images/projects/lp/linkinLaptop-Side.png";
-import hand1 from "../assets/images/projects/handcode/handLaptop-Side.png";
-import tienda1 from "../assets/images/projects/tiendablu/tienda-tablet-side.png"
+import lpTS1 from "../assets/images/projects/lp/lp.png";
+import hand1 from "../assets/images/projects/handcode/h.png";
+import tienda1 from "../assets/images/projects/tiendablu/t1.png"
 
 export const WorksListItem = {
     id: 'string',

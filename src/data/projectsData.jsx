@@ -1,8 +1,6 @@
 //linkin files
-import lpTS1 from "../assets/images/projects/lp/linkin-lg-1-png";
-import lpTS2 from "../assets/images/projects/lp/linkin-lg-2-png";
-import lpTS3 from "../assets/images/projects/lp/linkin-lg-3-png";
-import lpTablet from "../assets/images/projects/lp/linkin-tablet-main.png";
+import lpTS1 from "../assets/images/projects/lp/linkin-lg-1.png";
+import lpD from '../assets/images/projects/lp/lp.png';
 import lpTabletSide from "../assets/images/projects/lp/linkin-tablet-side.png";
 
 //handcodefiles
@@ -19,9 +17,9 @@ import tienda1 from "../assets/images/projects/tiendablu/tienda-lg-1.png"
 import tienda2 from "../assets/images/projects/tiendablu/tienda-lg-2.png"
 import tienda3 from "../assets/images/projects/tiendablu/tienda-lg-3.png"
 import tiendaTM from "../assets/images/projects/tiendablu/tienda-tablet-main.png"
-import tiendaTS from "../assets/images/projects/tiendablu/tienda-tablet-side.png"
+import tiendaTS from "../assets/images/projects/tiendablu/t1.png"
 
-export const proyectsData = [
+export const proyectData = [
 
     {
         id: "linkinpark",
@@ -29,9 +27,9 @@ export const proyectsData = [
         title: "Linkin Park",
         text: ["Web made as a final project in the web development course at coderhouse, which is a tribute to the alternative rock band from the United States called Linkin Park. In this project you will find, information about the band either as its history, each member, from their names to what they do and all public information found on the internet, also you can enjoy their albums, some videos and an image gallery."],
         secondary: ["HTML", "CSS", "SCSS", "BOOTSTRAP", "JAVASCRIPT"],
-        phoneImgSrc: [lpTS1, lpTS2, lpTS3],
-        desktopImgSrc: [],
-        tabletImgSrc: [lpTablet, lpTabletSide],
+        phoneImgSrc: [lpTS1],
+        desktopImgSrc: [lpD],
+        tabletImgSrc: [ lpTabletSide],
         mobileFirst: true,
         githubLink: "https://github.com/feralarcon1995/ProyectoFinalCoderHouse",
         liveLink: "https://feralarcon1995.github.io/ProyectoFinalCoderHouse/",
@@ -40,13 +38,13 @@ export const proyectsData = [
 
     {
         id: "handcode",
-        sequence: 1,
+        sequence: 2,
         title: "handcode",
         text: ["Web made for web development company, which informs and delves into the services offered to customers, you will find a section with some of his work, is fully responsive adapts to all screen widths of different types of devices."],
         secondary: ["HTML", "CSS", "SCSS", "BOOTSTRAP","JAVASCRIPT"],
-        phoneImgSrc: [hand1,hand2,hand3],
-        desktopImgSrc: [handLM, handMS],
-        tabletImgSrc: [handTM, handTS],
+        phoneImgSrc: [hand1],
+        desktopImgSrc: [ handMS],
+        tabletImgSrc: [handTM],
         mobileFirst: true,
         githubLink: "https://handcode.com.ar/",
         liveLink: "https://handcode.com.ar/",
@@ -55,21 +53,18 @@ export const proyectsData = [
 
     {
         id: "tiendablu",
-        sequence: 1,
+        sequence: 3,
         title: "Tienda Blu",
         text: ["Web made as a final project in the ReactJs course at coderhouse, which is an Ecommerce of sportswear. In this project you will find, different clothing products, from shoes, t-shirts, and much more, is functional, because you can add items to the shopping cart, delete them, and finalize the purchase which will take you to a form to fill out the shipping and purchase data.        ."],
         secondary: ["HTML", "CSS", "SCSS", "BOOTSTRAP","JAVASCRIPT", "REACTJS" , "FIREBASE" ],
-        phoneImgSrc: [tienda1,tienda2,tienda3],
-        desktopImgSrc: [],
-        tabletImgSrc: [tiendaTM, tiendaTS],
+        phoneImgSrc: [tienda3],
+        desktopImgSrc: [tiendaTS ],
+        tabletImgSrc: [tiendaTM],
         mobileFirst: true,
         githubLink: "https://github.com/feralarcon1995/TiendaBlu",
         liveLink: "https://feralarcon1995.github.io/TiendaBlu/",
         next: "linkinpark"
     },
-
-
-
 
 
 ]
