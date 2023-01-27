@@ -34,7 +34,7 @@ const ProjectFooter = ({next})=>{
 
     return(
         <ProjectFooterStyles data-scroll-section>
-            <NavLink to={next} className="next" rel="noreferrer">next <span>&rsaquo;</span></NavLink>
+            <NavLink to={`../works/${next}`} className="next">next <span>&rsaquo;</span></NavLink>
         </ProjectFooterStyles>
     )
 }
