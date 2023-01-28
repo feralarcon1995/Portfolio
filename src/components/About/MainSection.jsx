@@ -36,12 +36,25 @@ const MainSectionStyles = styled.div`
     }
     .main-text{
         width: 45%;
+        @media (hover: none) and (pointer: coarse), (max-width: 900px){
+            width: 60%;
+        }
+        @media (hover: none) and (pointer: coarse), (max-width: 700px){
+            width: 75%;
+        }
         @media (hover: none) and (pointer: coarse), (max-width: 500px){
             width: 95%;
         }
         p{
             margin: 3vw 0;
             mix-blend-mode: normal;
+            @media (hover: none) and (pointer: coarse), (max-width: 900px){
+                font-size: calc(var(--VW)*3)
+                padding:1vw;
+            }
+            @media (hover: none) and (pointer: coarse), (max-width: 700px){
+                font-size: calc(var(--VW)*3)
+            }
             @media (hover: none) and (pointer: coarse), (max-width: 500px){
                 margin: 5vw 0;
             }

@@ -31,43 +31,7 @@ const InfoStyles = styled.div`
             }
         }
     }
-    .info-credits{
-        width: 35%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        @media (hover: none) and (pointer: coarse){
-            width: 68%;
-            margin-top: 10vh;
-        }
-        @media (hover: none) and (pointer: coarse) and (max-width: 500px){
-            width: 80%;
-            margin-top: 10vh;
-        }
-        h1{
-            font-size: calc(var(--VW)*4);
-            @media (hover: none) and (pointer: coarse), (max-width: 500px){
-                font-size: calc(var(--VW)*6);
-            }
-        }
-        h2{
-            font-size: calc(var(--VW)*2);
-            margin: 0.5vw 0;
-            @media (hover: none) and (pointer: coarse), (max-width: 500px){
-                font-size: calc(var(--VW)*4);
-            }
-            :last-child{
-                margin-bottom: 0;
-            }
-        }
-        p{
-            margin-bottom: 3vw;
-            :nth-child(2){
-                margin-bottom: 1vw;
-                margin-top: 0.5vw;
-            }
-        }
-    }
+    
 `
 
 const Info = ()=>{

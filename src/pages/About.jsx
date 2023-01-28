@@ -9,6 +9,7 @@ import BigText from "../components/About/BigText";
 import MainSection from "../components/About/MainSection";
 import Info from "../components/About/Info";
 import Marque from "../components/About/Marque";
+import Testimonials from "../components/About/Testimonials";
 
 const AboutStyles = styled(motion.div)`
     padding: 0 4vw;
@@ -106,6 +107,7 @@ const About = () => {
                         <h2>Cybersecurity Enthusiast.</h2>
                     </div>
                     <Info />
+                    <Testimonials/>
                     <div data-scroll-section className="contact">
                         <h2>Got Some Ideas?</h2>
                         <a href="mailto: feralarcon1995@gmail.com">Let's Talk.</a>
