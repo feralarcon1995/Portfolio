@@ -26,11 +26,16 @@ Install portfolio with npm
 ## Tech Stack
 
 **Client:** 
+
 - Vite v4.0.0
 - React (JSX) v18.2.0
+
 **Styles:** 
+
 - StyleComponent v5.3.6
+
 **Librarys:**  
+
 - FramerMotion  v8.5.0
 - LocomotiveScroll v4.1.4
 - React-router-dom v6
