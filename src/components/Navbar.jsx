@@ -1,34 +1,32 @@
 import { NavLink } from 'react-router-dom'
+import { motion } from "framer-motion";
 import styled from 'styled-components';
+
+//icons
+import { BsLinkedin, BsGithub } from 'react-icons/bs'
 
 const NavStyles = styled.div`
 
-.logo, .works, .about{
+.logo, .works, .nav-footer{
     position: fixed;
     z-index: 20;
 }
 .logo{
     top: 2vw;
     left: 1.2vw;
-    width: 3.2vw;
-    height: 3.2vw;
     mix-blend-mode: normal;
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    font-size:2rem;
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         width: 7vw;
         height: 7vw;
     }
-    svg{
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        color: var(--black);
-    }
 }
-.works, .about{
+.works{
     transition: 0.3s all ease;
-    transform: rotate(90deg);
-    transform-origin: 0% 0%;
-    right: -3vw;
+    right: 2vw;
     font-size: calc(var(--VW) *1.2);
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         font-size: calc(var(--VW) *3);
@@ -41,11 +39,14 @@ const NavStyles = styled.div`
 .works{
     top: 2.2vw;
 }
-.about{
-    bottom: 6.5vw;
-    @media (hover: none) and (pointer: coarse), (max-width: 500px){
-        bottom: 13.5vw;
-    }
+.nav-footer{
+    postion:absolute;
+    bottom:2vw;
+    left: 1.2vw;
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    font-size:2rem;
 }
 `
 const Navbar = () => {
@@ -53,17 +54,22 @@ const Navbar = () => {
 
     return (
         <NavStyles>
-
-            <NavLink className="logo nav-nutton" to="/">
-                FA
-            </NavLink>
+                <NavLink className="logo nav-button" to="/">
+                    FA
+                </NavLink>
             <NavLink className="works nav-button" to="/works">
                 Works
             </NavLink>
-
-            <NavLink className=" about nav-button" to="/about" >
-                About
-            </NavLink>
+            <div className="nav-footer">
+                <a
+                    href="https://www.linkedin.com/in/feralarcon1995/" target="_blank" rel="noreferrer">
+                    <BsLinkedin />
+                </a>
+                <a
+                    href="https://github.com/feralarcon1995" target="_blank" rel="noreferrer">
+                    <BsGithub />
+                </a>
+            </div>
         </NavStyles>
     )
 }

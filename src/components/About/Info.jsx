@@ -39,7 +39,7 @@ const Info = ()=>{
         <InfoStyles data-scroll-section  className="info">
             <div className="info-main">
                 <h2>Languages</h2>
-                <p> JavaScript(ES6+), HTML, CSS/Scss/Sass, Python, SQL</p>
+                <p>JavaScript, HTML, CSS/Scss/Sass, Python, SQL</p>
                 <h2>Frameworks/Libraries/Others</h2>
                 <p>ReactJs, Firebase, Framer Motion, Styled Components, Git, Command Line, NPM, Django, Jquery</p>
                 <h2>UI/UX</h2>

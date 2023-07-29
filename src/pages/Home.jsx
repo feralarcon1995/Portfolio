@@ -1,221 +1,137 @@
-import { NavLink } from "react-router-dom";
-
+import { useScroll } from "../hooks/useScroll";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Logo from '../assets/images/logo.png';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import { BsLinkedin, BsGithub } from 'react-icons/bs'
 
+import Navbar from "../components/Navbar";
+import Panels from "../components/Panels";
+import BigText from "../components/About/BigText";
+import MainSection from "../components/About/MainSection";
+import Info from "../components/About/Info";
+import Marque from "../components/About/Marque";
+import Testimonials from "../components/About/Testimonials";
 
-//components
-import Panels from '../components/Panels'
-import Names from "../components/Home/Names"
-import { useAnimations } from './../hooks/useAnimations';
-
-//icons
-import { BsLinkedin,BsGithub } from 'react-icons/bs'
-
-const HomepageStyles = styled(motion.div)`
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: space-between;
-padding: 2vw;
- &.bg{
-  
- }
-@media (hover: none) and (pointer: coarse){
-    padding: 10vh 5vw;
-}
-
-.span-bg{
-  background:var(--bluelight);
-  font-weight: bold;
-}
-
-
-
-.left{
-    height: 100%;
-    width: 24%;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    @media (hover: none) and (pointer: coarse), (max-width: 500px){
-        display: none;
-    }
-    &-top{
-        .pic{
-            height: 50vh;
-            overflow: hidden;
+const AboutStyles = styled(motion.div)`
+    padding: 0 4vw;
+    padding-bottom: 6vw;
+    .hello{
+        h2{
+            font-size: calc(var(--VW)*);
+            text-align: center;
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                font-size: calc(var(--VW)*6);
+            }
         }
-    
     }
+    .name{
+        text-align: center;
+        margin: 10vh 0 20vh 0;
+        h2{
+            font-size: calc(var(--VW)*10);
+            line-height: 9vw;
+            height: 9vw;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0.1vw var(--black);
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: calc(var(--VW)*3);
+            text-align: center;
+            z-index: 5;
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                font-size: calc(var(--VW)*6);
+            }
+        }
 
-    &-bottom{
-        overflow: hidden;
-        display: flex;
-        align-items:center;
-        justify-content:space-evenly;
         a{
-            display: inline-block;
-            font-size: 8vh;
-            svg{
-                pointer-events: none;
-                mix-blend-mode: normal;
-                color: var(--black);
-                background-color: var(--bluelight);
-                border-radius:50%;
-                &:hover{
-                    color: var(--bluelight);
-                    background-color:var(--black);
-                }
+            font-size: calc(var(--VW)*3);
+            text-align: center;
+            margin:10px;
+        }
+    }
+    .split{
+        margin: 5vh 0;
+        h2{
+            text-transform: uppercase;
+            font-size: calc(var(--VW)*3);
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                font-size: calc(var(--VW)*5);
             }
         }
     }
-}
+    .contact{
+        text-align: right;
+        h2{
+            font-size: calc(var(--VW)*6);
+            text-transform: uppercase;
+        }
+        a{
+            font-size: calc(var(--VW)*10);
+            text-transform: uppercase;
+            -webkit-text-fill-color: var(----bluelight);
+            -webkit-text-stroke: 0.14vw var(--black);
+            mix-blend-mode: difference;
 
-.right{
-    height: 100%;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (hover: none) and (pointer: coarse), (max-width: 500px){
-        width: 100%;
-    }
-    &-descriptions{
-        display: none;
-        @media (hover: none) and (pointer: coarse), (max-width: 500px){
-            display: block;
-            text-align: justify;
-            width: 52%;
-            margin: 5vh 0;
-        }
-        @media (max-width: 500px){
-            width: 85%;
-        }
-    }
-    &-bottom{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-grow: 1;
-        max-height: 40vh;
-        position: relative;
-        top: 1%;
-        @media (hover: none) and (pointer: coarse), (max-width: 500px){
-            margin-top: 0;
-            margin-bottom: 5vh;
-        }
-        .link-container{
-            overflow: hidden;
-            text-align: right;
-            :nth-child(1){
-                padding-right: 5vw;
-                @media (hover: none) and (pointer: coarse), (max-width: 500px){
-                    padding-right: 0;
-                }
-            }
-            :nth-child(3){
-                padding-right: 10vw;
-                @media (hover: none) and (pointer: coarse), (max-width: 500px){
-                    padding-right: 0;
-                }
-            }
-            .link-wrapper{
-                a{
-                    display: inline-block;
-                    font-size:calc(var(--VW)*7);
-                    line-height: calc(var(--VW)*6);
-                    height: calc(var(--VW)*6);
-                    @media (hover: none) and (pointer: coarse), (max-width: 500px){
-                        font-size:calc(var(--VW)*12);
-                        line-height: calc(var(--VW)*11);
-                        height: calc(var(--VW)*11);
-                    }
-                    .number{
-                        pointer-events: none;
-                        font-size:calc(var(--VW)*2);
-                        @media (hover: none) and (pointer: coarse), (max-width: 500px){
-                        font-size:calc(var(--VW)*3);
-                        }
-                    }
-                }
+            &:hover{
+                -webkit-text-fill-color: var(--bluelight);
+                -webkit-text-stroke: 0.14vw var(--black);
             }
         }
     }
-}
 `
 
-const Home = () => {
+const About = () => {
+    const { scrollRef } = useScroll();
 
-  const { transition, opacityReveal, angleTextReveal } = useAnimations();
+    return (
+        <>
+            <Navbar />
+            <Panels />
+            <LocomotiveScrollProvider>
+                <AboutStyles
+                    initial={{ backgroundColor: "rgba(15, 14, 14, 1)", pointerEvents: "none" }}
+                    animate={{ backgroundColor: "rgba(15, 14, 14, 0)", pointerEvents: "unset" }}
+                    exit={{ opacity: [1, 1, 0], transition: { duration: 2, times: [0, 0.99, 1] } }}
+                    ref={scrollRef} data-scroll-container >
+                    <BigText />
+                    <div data-scroll-section className="hello">
+                        <h2 data-scroll data-scroll-speed="-8" data-scroll-direction="horizontal">Hi, my name is</h2>
+                    </div>
+                    <div data-scroll-section className="name">
+                        <h2 data-scroll data-scroll-speed="0.5">
+                            Fernando
+                        </h2>
+                        <h3 data-scroll data-scroll-speed="6">Web Developer</h3>
+                        <h2 data-scroll data-scroll-speed="0.5">Alarcon</h2>
+                        <a
+                            href="https://www.linkedin.com/in/feralarcon1995/" target="_blank" rel="noreferrer">
+                            <BsLinkedin />
+                        </a>
+                        <a
+                            href="https://github.com/feralarcon1995" target="_blank" rel="noreferrer">
+                            <BsGithub />
+                        </a>
+                    </div>
+                    <MainSection />
+                    <Marque />
+                    <div data-scroll-section className="split">
+                        <h2>FrontEnd Addicted.</h2>
+                        <h2>Cybersecurity Enthusiast.</h2>
+                    </div>
+                    <Info />
+                    <Testimonials />
+                    <div data-scroll-section className="contact">
+                        <h2>Got Some Ideas?</h2>
+                        <a href="mailto: feralarcon1995@gmail.com">Let's Talk.</a>
+                    </div>
+                </AboutStyles>
+            </LocomotiveScrollProvider>
 
 
-  return (
-    <>
-      <Panels />
-      <HomepageStyles
-        initial={{ backgroundColor: "#0f0e0e", pointerEvents: "none" }}
-        animate={{ backgroundColor: "transparent", pointerEvents: "unset" }}
-        exit={{ opacity: [1, 1, 0], transition: { duration: 2, times: [0, 0.99, 1] } }}
-      >
-        <div className="left">
-          <div className="left-top">
-          <motion.img
-              variants={opacityReveal} initial="initial"
-              animate="animate"
-              transition={{ ...transition, duration: 1, delay: 2.5 }}
-              src={Logo} alt="Logo"/>
 
-          </div>
-          <div className="left-bottom">
-          
-            <motion.a
-              variants={opacityReveal} initial="initial"
-              animate="animate"
-              transition={{ ...transition, duration: 1, delay: 2.7 }}
-              href="https://www.linkedin.com/in/feralarcon1995/" target="_blank" rel="noreferrer">
-              <BsLinkedin />
-            </motion.a>
-            <motion.a
-              variants={opacityReveal} initial="initial"
-              animate="animate"
-              transition={{ ...transition, duration: 1, delay: 2.9 }}
-              href="https://github.com/feralarcon1995" target="_blank" rel="noreferrer">
-              <BsGithub/>
-            </motion.a>
-          </div>
-        </div>
-        <div className="right">
-          <Names />
-        
-          <div className="right-bottom">
-            <motion.div className="link-container">
-              <motion.div className="link-wrapper"
-                variants={angleTextReveal} initial="initial" animate="animate" transition={{ ...transition, duration: 1, delay: 4 }}
-              >
-                <NavLink to="/works"><span className="number">01.</span>Works</NavLink>
-              </motion.div>
-            </motion.div>
-            <motion.div className="link-container">
-              <motion.div className="link-wrapper"
-                variants={angleTextReveal} initial="initial" animate="animate" transition={{ ...transition, duration: 1, delay: 4.2 }}
-              >
-                <NavLink to="/about"><span className="number">02.</span>About</NavLink>
-              </motion.div>
-            </motion.div>
-            <motion.div className="link-container">
-              <motion.div className="link-wrapper"
-                variants={angleTextReveal} initial="initial" animate="animate" transition={{ ...transition, duration: 1, delay: 4.4 }}
-              >
-                <a href="mailto:feralarcon1995@gmail.com"><span className="number">03.</span>Contact</a>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </HomepageStyles>
-    </>
-  )
+        </>
+    )
 }
 
-export default Home
+export default About

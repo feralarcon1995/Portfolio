@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
     p{
         font-family:   Grotesk;
         font-weight: 400;
-        font-size: calc(var(--VW)*1.4);
+        font-size: calc(var(--VW)*1.6);
         word-spacing: calc(var(--VW) *0.2);
         line-height: 120%;
         overflow-wrap: break-word;

@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css'
 import { GlobalStyles } from './styles/GlobalStyles';
 import {  Routes, Route, useLocation } from 'react-router-dom'
-import Home from './pages/Home';
-import About from './pages/About';
+import About from './pages/Home';
 import Work from './pages/Work';
 import NotFound from './pages/NotFound';
 import { AnimatePresence } from 'framer-motion';
@@ -37,8 +36,7 @@ function App() {
       <CustomCursor />
       <AnimatePresence>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/" element={<About />} />
           <Route exact path="/works" element={<Work />} />
           <Route exact path="/works/:projectID" element={<Project/>}/>
           <Route exact path="*" element={<NotFound />} />
