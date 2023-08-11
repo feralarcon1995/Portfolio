@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 const ProjectFooterStyles = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     font-size: calc(var(--VW) *3);
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         font-size: calc(var(--VW) *6);

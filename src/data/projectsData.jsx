@@ -101,6 +101,7 @@ export const proyectData = [
         desktopImgSrc: [cd],
         tabletImgSrc: [cm],
         mobileFirst: true,
+        githubLink: "empty",
         liveLink: "https://lachinafutbol.com/",
         next: "linkinpark"
     },

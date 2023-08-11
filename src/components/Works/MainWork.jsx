@@ -127,9 +127,10 @@ const MainWork = ({ title, githubLink, liveLink, texts, desktopImgSrc }) => {
                     animate="animate"
                     transition={{ ...transition, duration: 2, delay: 2.6 }}
                     className="links">
-                    <a href={githubLink} target="_blank" rel="noreferrer">
+                    {githubLink  !== "empty" ? (<a href={githubLink} target="_blank" rel="noreferrer">
                         <BsGithub />
-                    </a>
+                    </a> ) : null}
+
                     <a href={liveLink} target="_blank" rel="noreferrer">
                         <FaExternalLinkSquareAlt />
                     </a>

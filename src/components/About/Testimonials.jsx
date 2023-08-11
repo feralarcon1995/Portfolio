@@ -115,7 +115,7 @@ const Testimonials = () => {
             avatar: PER3,
             name: 'Luis Pirela ',
             job: "Frontend Developer at Fulljaus",
-            review: '"Good developer, self-taught and versed in CCS styles with a lot of initiative and knowledge that he can apply in a practical way to the projects he is involved in."'
+            review: '"Good developer, self-taught and versed in CSS styles with a lot of initiative and knowledge that he can apply in a practical way to the projects he is involved in."'
         }
         ,
         {

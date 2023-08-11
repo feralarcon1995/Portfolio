@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useAnimations } from './../../hooks/useAnimations';
 
-import { NavLink } from "react-router-dom";
 
 const SecondarySectionStyles = styled.div`
     margin: 20vh 10vw;

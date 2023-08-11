@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useAnimations } from './../hooks/useAnimations';
 import { WorksList } from '../data/workList';
@@ -7,26 +7,6 @@ import WorkItem from '../components/Works/WorkItem';
 import Navbar from '../components/Navbar';
 import Panels from '../components/Panels';
 
-
-const coverReveal = keyframes`
-    from{
-        left: 0%;
-    }
-    to {
-        left: 120%;
-    }
-`
-
-const CoverStyles = styled.main`
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vw;
-    z-index: 15;
-    background-color: transparent;
-    animation: ${coverReveal} 0.01s linear 6.5s forwards;
-`
 
 const WorksStyles = styled(motion.section)`
     width: 100vw;

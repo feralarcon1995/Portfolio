@@ -75,9 +75,9 @@ export const WorksList = [
         src: china,
         leftFlex: 0,
         rightFlex: 2,
-        thumbnailOffset: "80%",
+        thumbnailOffset: "60%",
         offsetX: 30,
-        offsetY: 5,
+        offsetY: -10,
     },
 
 ]

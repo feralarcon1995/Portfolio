@@ -4,7 +4,7 @@ import {Locomotive} from "./locomotive";
 const GlobalStyles = createGlobalStyle`
     ${Locomotive};
     :root{
-        --black: #fff;
+        --black: #dbecff;
         --bluelight:#4ca1ff;
         --grey: #866c55;
     }
@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body{
         background: rgb(255,137,229);
-        background: linear-gradient(141deg,rgb(0 0 0) 0%,rgba(107,187,255,1) 51%,rgba(147,118,255,1) 100%);
+        background: linear-gradient(141deg,rgb(0 0 0) 0%,rgba(107,187,255,1) 100%);
         cursor: none;
         isolation: isolate;
         min-height: 100vh;
