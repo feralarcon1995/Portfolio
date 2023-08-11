@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import pic from '../../assets/images/homepage/profile2.png';
+import pic from '../../assets/images/homepage/me.jpeg';
 
 const MainSectionStyles = styled.div`
+   padding:2rem;
     margin: 20vh 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position:relative;
-    background:#191919;
-    min-height:90vh;
-    max-height:100%;
+    height:100%;
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -27,24 +26,24 @@ const MainSectionStyles = styled.div`
       }
       
     .main-pic{
-        width: 60%;
-        height: 100%;
-        object-fit:contain;
-        position:absolute;
-        bottom:0;
-        right:0;
-        margin-right: 5vw;
-        overflow: hidden;
-        @media (hover: none) and (pointer: coarse), (max-width: 500px){
-            display:none;
-        }
+        width: 90%;
+    height: 90vh;
+    background: linear-gradient(0deg,rgba(23,25,35,0.80) 0%,rgb(23 25 35 / 68%) 100%),url(https://i.ibb.co/vQWS4sW/me.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 0.3125rem;
+    margin-right: 5vw;
     }
     .main-text{
-        width: 50%;
+        position:relative;
+        right:12%;
+        width: 80%;
         z-index:1111;
-        padding-left:5vw;
+        padding:2vw;
         @media (hover: none) and (pointer: coarse), (max-width: 900px){
-            width: 60%;
+            width: 90%;
+            right:14%;
         }
         @media (hover: none) and (pointer: coarse), (max-width: 700px){
             width: 75%;
@@ -57,9 +56,9 @@ const MainSectionStyles = styled.div`
             z-index:1111;
             margin: 3vw 0;
             mix-blend-mode: normal;
+            font-size:2.6rem;
             @media (hover: none) and (pointer: coarse), (max-width: 900px){
-                font-size: 1.2rem;
-                padding:1vw;
+                font-size: 1.5rem;
             }
             @media (hover: none) and (pointer: coarse), (max-width: 700px){
                 font-size: 1.2rem;
@@ -80,7 +79,7 @@ const MainSection = ()=>{
     
     return(
         <MainSectionStyles data-scroll-section className="main">
-            <img src={pic} alt="fernando alarcon"  className="main-pic"/>
+            <div className="main-pic" style={{ }}></div>
             <div className="main-text">
                 <p> <span className="span-bg">Welcome to my portfolio</span> , thank you for your interest, let me introduce myself so you can get to <span className="span-bg">know me better.</span> </p>
 

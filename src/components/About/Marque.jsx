@@ -18,6 +18,7 @@ const MarqueeStyles = styled.div`
             font-size: calc(var(--VW)*8);
             text-transform: uppercase;
             padding-right: 2vw;
+            color:#fff;
         }
     }
     .left{

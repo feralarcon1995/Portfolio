@@ -10,6 +10,7 @@ const NavStyles = styled.div`
 .logo, .works, .nav-footer{
     position: fixed;
     z-index: 20;
+    color:#fff;
 }
 .logo{
     top: 2vw;
@@ -30,7 +31,6 @@ const NavStyles = styled.div`
     font-size: calc(var(--VW) *1.2);
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         font-size: calc(var(--VW) *3);
-
     }
     :hover{
         -webkit-text-stroke: 0.1vw var(--black);

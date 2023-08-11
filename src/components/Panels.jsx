@@ -17,7 +17,7 @@ pointer-events: none;
         position: absolute;
         top: 0;
         z-index: 30;
-        background-color: var(--black);
+        background-color: #191919;
     }
     .left{
         left: 0;
