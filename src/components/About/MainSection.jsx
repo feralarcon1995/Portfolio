@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import pic from '../../assets/images/homepage/me.jpeg';
 
 const MainSectionStyles = styled.div`
    padding:2rem;
@@ -49,7 +48,9 @@ const MainSectionStyles = styled.div`
             width: 75%;
         }
         @media (hover: none) and (pointer: coarse), (max-width: 500px){
-            width: 95%;
+            width: 100%;
+            right: 0;
+            bottom: 20vh;
         }
         p{
             color:#fff;
@@ -61,10 +62,11 @@ const MainSectionStyles = styled.div`
                 font-size: 1.5rem;
             }
             @media (hover: none) and (pointer: coarse), (max-width: 700px){
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
             @media (hover: none) and (pointer: coarse), (max-width: 500px){
                 margin: 5vw 0;
+                font-size: 1.5rem;
             }
             a{
                 font-family:   Grotesk;
