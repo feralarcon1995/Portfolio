@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useAnimations } from '../../hooks/useAnimations';
 
 const BigTextStyles = styled.div`
+padding: 0 4vw;
 height:100vh;
 display: flex;
 flex-wrap: wrap;

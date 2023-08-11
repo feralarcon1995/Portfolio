@@ -17,7 +17,7 @@ const coverReveal = keyframes`
     }
 `
 
-const CoverStyles = styled.div`
+const CoverStyles = styled.main`
     position: fixed;
     left: 0;
     top: 0;
@@ -28,7 +28,7 @@ const CoverStyles = styled.div`
     animation: ${coverReveal} 0.01s linear 6.5s forwards;
 `
 
-const WorksStyles = styled(motion.div)`
+const WorksStyles = styled(motion.section)`
     width: 100vw;
     height: 100vh;
     padding: 6vw 4vw;

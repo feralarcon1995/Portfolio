@@ -12,8 +12,7 @@ import Info from "../components/About/Info";
 import Marque from "../components/About/Marque";
 import Testimonials from "../components/About/Testimonials";
 
-const AboutStyles = styled(motion.div)`
-    padding: 0 4vw;
+const AboutStyles = styled(motion.main)`
     padding-bottom: 6vw;
     .hello{
         h2{
@@ -34,6 +33,10 @@ const AboutStyles = styled(motion.div)`
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: 0.1vw var(--black);
             text-transform: uppercase;
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                -webkit-text-stroke: 0.3vw var(--black);
+                font-size: calc(var(--VW)*12);
+            }
         }
         h3{
             font-size: calc(var(--VW)*3);
@@ -48,9 +51,28 @@ const AboutStyles = styled(motion.div)`
             font-size: calc(var(--VW)*3);
             text-align: center;
             margin:10px;
+            svg{
+            pointer-events: none;
+            mix-blend-mode: normal;
+            color: var(--black);
+            background-color: var(--bluelight);
+            border-radius:50%;
+            &:hover{
+                color: var(--bluelight);
+                background-color:var(--black);
+                transform: scale(0.7);
+                        }
+            }
+            @media (hover: none) and (pointer: coarse), (max-width: 500px){
+                -webkit-text-stroke: 0.3vw var(--black);
+                font-size: calc(var(--VW)*6);
+            }
+
+            
         }
     }
     .split{
+        padding: 0 4vw;
         margin: 5vh 0;
         h2{
             text-transform: uppercase;
@@ -61,6 +83,8 @@ const AboutStyles = styled(motion.div)`
         }
     }
     .contact{
+
+        padding:  4vw;
         text-align: right;
         h2{
             font-size: calc(var(--VW)*6);

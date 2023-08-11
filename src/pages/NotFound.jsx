@@ -3,7 +3,7 @@ import  Panels  from "../components/Panels";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
-const NotFoundStyles = styled(motion.div)`
+const NotFoundStyles = styled(motion.main)`
     height: 100vh;
     display: flex;
     justify-content: center;

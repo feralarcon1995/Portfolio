@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const InfoStyles = styled.div`
+padding: 0 4vw;
     margin-bottom: 20vh;
     margin-right: 5vw;
     display: flex;

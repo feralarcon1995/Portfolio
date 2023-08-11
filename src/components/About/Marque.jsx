@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {motion} from "framer-motion";
 
 const MarqueeStyles = styled.div`
+    padding: 0 4vw;
     position: relative;
     left: -10vw;
     .left, .right{

@@ -16,7 +16,7 @@ import "swiper/css/effect-fade";
 
 
 const TestimionalStyle = styled.div`
-
+padding: 0 4vw;
 margin: 20vh 0;
 flex-direction: column;
 align-items: flex-start;

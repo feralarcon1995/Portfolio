@@ -3,6 +3,7 @@ import hand1 from "../assets/images/projects/handcode/h.png";
 import tienda1 from "../assets/images/projects/tiendablu/t1.png";
 import pinder from "../assets/images/projects/pinder/pinder.png";
 import viajaya from "../assets/images/projects/viajaya/v1.png";
+import china from "../assets/images/projects/china/china-d.png";
 
 export const WorksListItem = {
     id: 'string',
@@ -65,6 +66,16 @@ export const WorksList = [
         leftFlex: 0,
         rightFlex: 2,
         thumbnailOffset: "60%",
+        offsetX: 30,
+        offsetY: 5,
+    },
+    {
+        id: "lachinafutbol",
+        title: "LA CHINA FUTBOL",
+        src: china,
+        leftFlex: 0,
+        rightFlex: 2,
+        thumbnailOffset: "80%",
         offsetX: 30,
         offsetY: 5,
     },

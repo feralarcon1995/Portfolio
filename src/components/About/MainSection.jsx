@@ -5,8 +5,12 @@ import pic from '../../assets/images/homepage/profile2.png';
 const MainSectionStyles = styled.div`
     margin: 20vh 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    position:relative;
+    background:#191919;
+    min-height:90vh;
+    max-height:100%;
     @media (hover: none) and (pointer: coarse), (max-width: 500px){
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -15,24 +19,30 @@ const MainSectionStyles = styled.div`
 
 
     .span-bg{
-        background:var(--bluelight);
+        background: -webkit-background-image: linear-gradient(125deg, rgb(230, 142, 156),rgb(118, 118, 202));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-weight: bold;
+        background-image: linear-gradient(125deg, rgb(230, 142, 156),rgb(118, 118, 202));
       }
       
     .main-pic{
-        width: 25vw;
-        height: 30vw;
+        width: 60%;
+        height: 100%;
+        object-fit:contain;
+        position:absolute;
+        bottom:0;
+        right:0;
         margin-right: 5vw;
-        text-align: center;
         overflow: hidden;
         @media (hover: none) and (pointer: coarse), (max-width: 500px){
-            width: 100%;
-            width: 50vw;
-            height: 55vw;
+            display:none;
         }
     }
     .main-text{
         width: 50%;
+        z-index:1111;
+        padding-left:5vw;
         @media (hover: none) and (pointer: coarse), (max-width: 900px){
             width: 60%;
         }
@@ -43,6 +53,8 @@ const MainSectionStyles = styled.div`
             width: 95%;
         }
         p{
+            color:#fff;
+            z-index:1111;
             margin: 3vw 0;
             mix-blend-mode: normal;
             @media (hover: none) and (pointer: coarse), (max-width: 900px){

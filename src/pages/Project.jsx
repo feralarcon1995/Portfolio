@@ -13,7 +13,7 @@ import SecondarySection from "../components/Works/Secondary";
 import ProjectFooter from "../components/Works/ProjectFooter";
 import Panels from "../components/Panels";
 
-const ProjectStyles = styled(motion.div)`
+const ProjectStyles = styled(motion.main)`
 padding: 6vw 5vw;
 padding-right: 6vw;
 .number{
@@ -21,7 +21,7 @@ padding-right: 6vw;
     justify-content: flex-start;
     position: absolute;
     left: 0%;
-    top: 29%;
+    top: 34%;
     overflow: hidden;
     margin: 5vw 0;
     @media (hover: none) and (pointer: coarse), (max-width: 500px){

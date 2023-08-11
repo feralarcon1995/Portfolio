@@ -17,6 +17,9 @@ import pinder from "../assets/images/projects/pinder/pinder.png";
 import v1 from "../assets/images/projects/viajaya/v1.png";
 import v2 from "../assets/images/projects/viajaya/V2.png";
 
+//CHINA
+import cd from "../assets/images/projects/china/china-d.png";
+import cm from "../assets/images/projects/china/china-m.png";
 
 export const proyectData = [
 
@@ -87,6 +90,18 @@ export const proyectData = [
         mobileFirst: true,
         githubLink: "https://github.com/feralarcon1995/ViajaYa",
         liveLink: "https://feralarcon1995.github.io/ViajaYa/",
+        next: "lachinafutbol"
+    },
+    {
+        id: "lachinafutbol",
+        sequence: 6,
+        title: "LA CHINA FUTBOL",
+        text: ["Web made for a client that organizes women's football tournaments, in which are the dynamic venues of each tournament, different categories, loading users and teams, keys, tracking and staff of the competition, is fully responsive and self-administered, is made in wordpress and is retouched to be 100% functional and customized. "],
+        secondary: ["HTML", "CSS", "WORDPRESS","JAVASCRIPT" , "JQUERY", "PHP" ],
+        desktopImgSrc: [cd],
+        tabletImgSrc: [cm],
+        mobileFirst: true,
+        liveLink: "https://lachinafutbol.com/",
         next: "linkinpark"
     },
 
