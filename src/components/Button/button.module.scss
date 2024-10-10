@@ -1,0 +1,92 @@
+.btn {
+  --btn-color: #fff;
+  --text-color: #000;
+  --hover-color:transparent;
+  --font-size: 1.6rem;
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_cta {
+  padding: 0.5rem 3rem;
+  border-radius: 1000px;
+  font-weight: 500;
+  font-size: var(--font-size);
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  color: var(--btn-color);
+}
+
+.btn_cta_border {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid var(--btn-color);
+  border-radius: 1000px;
+  z-index: 1;
+}
+
+.btn_cta_ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translateY(190%);
+    background: var(--btn-color);
+    border-radius: 50% 50% 0 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
+  }
+}
+
+.btn_cta_title {
+  position: relative;
+  font-size: var(--font-size);
+  z-index: 1;
+  overflow: hidden;
+  font-family: var(--font-monument);
+  color: var(--text-color);
+  span {
+    display: block;
+    position: relative;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:after {
+      content: attr(data-text);
+      display: block;
+      position: absolute;
+      top: 250%;
+      left: 0;
+      color: var(--hover-color);
+    }
+  }
+}
+
+@media (pointer: fine) {
+  .btn_cta:hover .btn_cta_ripple span {
+    transform: translateY(0);
+    border-radius: 0%;
+  }
+
+  .btn_cta:hover .btn_cta_title span {
+    transform: translateY(-240%);
+  }
+}

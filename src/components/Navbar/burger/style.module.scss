@@ -1,0 +1,85 @@
+.logo {
+  font-family: var(--font-monument);
+  padding: 10px;
+  height: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  mix-blend-mode: difference;
+  cursor: pointer;
+  z-index: 222;
+}
+.button {
+  width: 200px;
+  height: 30px;
+  background-color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  z-index: 1;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  border-radius: 1000px;
+  margin: 10px;
+  overflow: hidden;
+
+  p {
+    display: none;
+    color: #000;
+    margin: 0px;
+    text-transform: uppercase;
+    transition: color 0.5s;
+    font-family: var(--font-monument);
+  }
+
+  svg {
+    line {
+      transition: stroke 0.5s;
+    }
+  }
+
+  .background {
+    background-color: var(--main-color);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 0;
+    transition: height 0.3s;
+  }
+
+  &:hover {
+    p {
+      color: var(--black);
+    }
+    svg {
+      line {
+        stroke: var(--black);
+      }
+    }
+    .background {
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .button {
+    height: 60px;
+    p {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .button {
+    width: max-content
+  }
+}

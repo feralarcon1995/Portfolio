@@ -1,0 +1,109 @@
+.container {
+  padding: 2rem;
+  position: relative;
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .titleContainer {
+    overflow: hidden;
+  }
+
+  .title {
+    font-family: var(--font-bricolage);
+    font-size: 6rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    overflow: hidden;
+
+    span {
+      display: block;
+    }
+  }
+
+  img {
+    width: 70%;
+    height: 800px;
+    object-fit: cover;
+    position: absolute;
+    top: 10%;
+    right: 32px;
+    z-index: -1;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-bricolage);
+    font-size: 2rem;
+    width: 100%;
+    left: 0;
+    p {
+      width: 25%;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    .title {
+      font-size: 5rem;
+      width: 100%;
+    }
+
+    .footer p {
+      width: 70%;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    img {
+      width: 100%;
+      height: 700px;
+      right: 0;
+    }
+    .title {
+      font-size: 4rem;
+      width: 100%;
+    }
+
+    .footer {
+      padding: 0;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.marquee_container {
+  display: flex;
+  gap: 2rem; // Espacio entre los botones
+  overflow: hidden; // Para ocultar los botones fuera del área visible
+  white-space: nowrap; // Evita el salto de línea
+}

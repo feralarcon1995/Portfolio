@@ -1,12 +1,16 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --light: #ffffff;
+  --black: #171717;
+  --light-grey: #c4c4c41f;
+  --main-color: #F2E5BF;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --black: #0a0a0a;
+    --light: #fcfcfc;
+    --light-grey: #c4c4c41f;
+    --main-color: #F2E5BF;
   }
 }
 
@@ -14,14 +18,13 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  isolation: isolate;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--light);
+  background: var(--black);
+  font-family: var(--font-monument);
 }
 
 * {
@@ -33,10 +36,42 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font-family: var(--font-bricolage);
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  font-family: var(--font-monument);
+  font-size: 3rem;
+}
+
+#logo {
+  mix-blend-mode: difference;
+}
+
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
